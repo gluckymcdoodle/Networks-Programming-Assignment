@@ -1,0 +1,44 @@
+issues I had while coding, max clients not disconnecting properly, 
+server replies were inconsistent and were not always sending,
+after using some of the commands, they would stop working entirely.
+adding multiple clients to the server, after watching a video helping with the code
+I had to change it to allow for multiple clients instead of just one connecting.
+file creation and list command is not working properly, when I type in the command
+for downloading a file its like this: "list" then it sends the files, in this case 
+test.txt, then I type test.txt, and it then sends me an extra input, and no matter what I type
+it will then send me the question for the filename I want to download then it echos my message:
+
+list
+You: Server: test.txt
+test.txt
+You: a
+Enter filename to save (include extension): test.txt
+You: File has been saved. client_downloads\test.txt
+Server: a ACK
+
+max 3 clients not working properly, it says connected to server, and never gives error message - fixed
+
+FILE TRANSFER IS FUCKED - fixed.
+1 problem was that it was doing it too fast so I added a delay so that it sends the messages and the messaging part of the code
+was going before the enter a filename, so thats why there was the you: before the enter a filename.
+enter filename to save is removed. easier to just type the name and insta get it
+startfile and endfile used for binary transfers, non binary not working idk
+realized now that it sends a file even if you havent typed list
+
+Connected to server!
+Server: Welcome Client01!
+You: test.txt
+You: Receiving file: test.txt
+File has been saved. client_downloads\test.txt
+
+another problem is that I need it to go into some separate instance when you type list, so that the very next message is either a file
+or that it gives an error. right now it cannot do that because it's either I give an error for every message not a file, or any message can download a file
+fixed using instance -> file_request_instance = T/F
+
+
+to fix list
+you: not coming up everytime -> added a slight timer before "You: "
+maybe the client numbers not keeping track
+list on a new line 
+files downloading when not after typing list
+
