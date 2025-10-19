@@ -37,7 +37,7 @@ fixed using instance -> file_request_instance = T/F
 you: not coming up everytime -> added a slight timer before "You: "
 
 to fix list
-maybe the client numbers not keeping track
+maybe the client numbers not keeping track properly, if client 1 leaves, then a client 4 can join but is named client04, not sure if a problem
 list on a new line
 
 
