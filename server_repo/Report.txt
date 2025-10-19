@@ -34,11 +34,10 @@ File has been saved. client_downloads\test.txt
 another problem is that I need it to go into some separate instance when you type list, so that the very next message is either a file
 or that it gives an error. right now it cannot do that because it's either I give an error for every message not a file, or any message can download a file
 fixed using instance -> file_request_instance = T/F
-
+you: not coming up everytime -> added a slight timer before "You: "
 
 to fix list
-you: not coming up everytime -> added a slight timer before "You: "
 maybe the client numbers not keeping track
-list on a new line 
-files downloading when not after typing list
+list on a new line
+
 
